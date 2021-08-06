@@ -1,0 +1,11 @@
+title: Minecraftn't
+
+exclude:
+  - "download-extras.md"
+  - "README.md"
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"

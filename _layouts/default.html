@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{% if page.title %}{{ page.title }} - {% endif %}Minecraftn't</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+	<div class="index-top">
+		<a href="/"><img src="assets/logo.png"></a>
+	</div>
+	<div class="nav">
+		<div class="links">
+			<a href="/">Home</a>
+			- <a href="about">About</a>
+			{% comment %}- <a href="gallery">Gallery</a> -->{% endcomment %}
+			- <a href="download">Download</a>
+			{% comment %}- <a href="devblog/">Development Blog</a>{% endcomment %}
+			<span class="right">
+				<a href="https://discord.gg/etxAUtP9u4"><i class="fab fa-discord"></i></a>
+				<a href="https://github.com/minecraftnt-minetest"><i class="fab fa-github"></i></a>
+			</span>
+		</div>
+	</div>
+	<div class="container">
+		<div class="content" {% if page.title %}id="page-{{ page.title | slugify }}"{% endif %}>
+			{% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
+			{{ content }}
+		</div>
+	</div>
+	<div class="footer">
+		<p>Made with &hearts; by Danil_2461 and ROllerozxa</p>
+	</div>
+</body>
+</html>

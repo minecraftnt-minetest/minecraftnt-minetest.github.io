@@ -1,0 +1,175 @@
+---
+---
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	background-color: #222222;
+	background: url('stone.png');
+	color: #ffffff;
+	margin: 0;
+	font-family: "Fira Code", monospace;
+	font-size: 14pt;
+	padding-bottom: 200px;
+}
+
+a {
+	color: greenyellow;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 40px;
+}
+
+p {
+	line-height: 1.4;
+}
+
+pre {
+	background-color: #141414;
+	padding: 12px;
+}
+code {
+	background-color: #141414;
+}
+
+.index-top {
+	color: #888888;
+	margin: auto;
+	padding: 5px;
+	text-align: center;
+	width: 465px;
+
+	img {
+		margin-top: 30px;
+		margin-bottom: 30px;
+		width: 465px;
+		height: 52px;
+	}
+}
+
+.nav {
+	background-color: #1a1a1a;
+	background: url('dirt.png');
+	border-top: 2px solid #1a1a1a;
+	border-bottom: 2px solid #1a1a1a;
+
+	padding: 25px 50px;
+
+	.links {
+		margin: auto;
+		max-width: 900px;
+
+		a {
+			color: white;
+			font-size: 14pt;
+			font-weight: bold;
+			text-decoration: none;
+			padding: 20px 10px;
+		}
+
+		.right {
+			float: right;
+		}
+	}
+}
+
+.container {
+	max-width: 1200px;
+	margin: 20px auto;
+
+	.content {
+		margin: 0px 20px;
+	}
+}
+
+.videobox {
+	margin-left: 5px;
+	float: right;
+}
+
+
+.features {
+	margin-top: 80px;
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.feature {
+		float: left;
+		width: 33.33%;
+		text-align: center;
+
+		.fas {
+			font-size: 48pt;
+			margin-bottom: 20px;
+		}
+
+		h2 {
+			margin-top: 0;
+		}
+	}
+}
+
+#page-about {
+	img {
+		width: 400px;
+		float: right;
+		margin-left: 10px;
+	}
+}
+
+/// Sticky footer \\\
+
+.footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 30px;
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+	vertical-align: bottom;
+	font-size: 10pt;
+}
+
+/// Download button \\\
+
+$btn-color: #ffffff;
+$btn-bgcolor: #2a9c2a;
+$btn-git-bgcolor: #2a8b9c;
+
+.btn {
+	&:hover {
+		background-color: darken($btn-bgcolor, 10%);
+	}
+
+	background-color: $btn-bgcolor;
+	color: $btn-color;
+	display: inline-block;
+
+	font-weight: bold;
+	margin-right: .5em;
+	padding: 10px 20px;
+
+	&.big {
+		font-size: 20pt;
+	}
+
+	&.git {
+		&:hover {
+			background-color: darken($btn-git-bgcolor, 10%);
+		}
+
+		background-color: $btn-git-bgcolor;
+	}
+}
